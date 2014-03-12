@@ -34,7 +34,7 @@ fun HtmlBodyTag.button(c: String? = null, contents: BUTTON.() -> Unit = empty_co
 open class BUTTON(containingTag: HtmlBodyTag) : HtmlBodyTag(containingTag, "button") {
     public var name: String by Attributes.name
     public var value: String by Attributes.value
-    public var buttonType: ButtonType by Attributes.buttonType
+    public var buttonType: String by Attributes.buttonType
     public var href: Link by Attributes.href
 }
 
@@ -184,8 +184,8 @@ fun HtmlBodyTag.form(c: String? = null, contents: FORM.() -> Unit = empty_conten
 
 public open class FORM(containingTag: HtmlBodyTag) : HtmlBodyTag(containingTag, "form") {
     public var action: Link by Attributes.action
-    public var enctype: EncodingType by Attributes.enctype
-    public var method: FormMethod by Attributes.method
+    public var enctype: String by Attributes.enctype
+    public var method: String by Attributes.method
 }
 
 fun HtmlBodyTag.select(c: String? = null, contents: SELECT.() -> Unit = empty_contents) = contentTag(SELECT(this), c, contents)
@@ -217,7 +217,7 @@ open class INPUT(containingTag: HtmlBodyTag) : HtmlBodyTag(containingTag, "input
     public var height: Int by Attributes.height
     public var maxlength: Int by Attributes.maxlength
     public var multiple: Boolean by Attributes.multiple
-    public var inputType: InputType by Attributes.inputType
+    public var inputType: String by Attributes.inputType
     public var name: String by Attributes.name
     public var pattern: String by Attributes.pattern
     public var placeholder: String by Attributes.placeholder
@@ -246,7 +246,7 @@ open class TEXTAREA(containingTag: HtmlBodyTag) : HtmlBodyTag(containingTag, "te
     public var readonly: Boolean by Attributes.readonly
     public var required: Boolean by Attributes.required
     public var rows: Int by Attributes.rows
-    public var wrap: Wrap by Attributes.wrap
+    public var wrap: String by Attributes.wrap
 }
 
 fun HtmlBodyTag.fieldset(c: String? = null, contents: FIELDSET.() -> Unit = empty_contents) = contentTag(FIELDSET(this), c, contents)
