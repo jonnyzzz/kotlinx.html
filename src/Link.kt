@@ -1,7 +1,5 @@
 package kotlinx.html
 
-import java.net.URL
-
 public trait Link {
     fun href(): String
 }
