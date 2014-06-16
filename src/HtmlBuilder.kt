@@ -185,6 +185,6 @@ class HtmlText(containingTag: HtmlTag?, private val text: String) : HtmlElement(
     }
 }
 
-class InvalidHtmlException(val message: String) : RuntimeException(message) {
+class InvalidHtmlException(message: String) : RuntimeException(message) {
 
 }
